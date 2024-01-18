@@ -14,7 +14,7 @@ function BoxList(){
   const [boxes, setBoxes] = useState([])
 
 
-  /** Add box with it's characteristic -
+  /** Add box with its characteristics -
    * id, height, width, and backgroundColor
    */
 
@@ -24,13 +24,14 @@ function BoxList(){
   }
 
   /** remove box with the same id. */
-  function removeBox(){
-
+  function removeBox(id){
+    const remainingBs = boxes.filter(b => b.id !== id);
+    setBoxes(remainingBs);
   }
 
   return (
     <div className="BoxList">
-        <NewBoxForm />
+        <NewBoxForm addBox={addBox}/>
         {boxes.map(({id, width, height, backgroundColor }) => (
           <Box
             key={id}
