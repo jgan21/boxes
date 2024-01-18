@@ -6,7 +6,7 @@ import { useState } from "react";
  * - addBox: function from parent;
  *
  * State:
- * formData: {width, height, backgroundColor }
+ * formData: { width, height, backgroundColor }
  *
  * BoxList -> NewBoxForm
  */
@@ -20,7 +20,6 @@ function NewBoxForm({ addBox }) {
   const [formData, setFormData] = useState(initialState);
 
   /** Update local state w/curr state of inputs. */
-
   function handleChange(evt){
     const { name, value } = evt.target;
     setFormData(fData => ({
@@ -30,7 +29,6 @@ function NewBoxForm({ addBox }) {
   }
 
   /** Send {width, height, backgroundColor} to parent & clear form. */
-
   function handleSubmit(evt){
     evt.preventDefault();
     addBox(formData);

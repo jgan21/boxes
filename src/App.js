@@ -1,9 +1,17 @@
 import React from "react";
 import BoxList from "./BoxList";
 
+/**
+ * Props - none
+ *
+ * State - none
+ *
+ * App -> BoxList
+ */
+
 function App() {
   return (
-    <div>
+    <div className="App">
       <BoxList />
     </div>
   )

@@ -13,13 +13,17 @@ import React from "react";
  *
  * BoxList -> Box
  */
+
 function Box({ id, width, height, backgroundColor, removeBox }) {
+  console.log("BoxIdInComponent=", id)
   const boxStyle = {
     'width': `${width}px`,
     'height': `${height}px`,
     'backgroundColor': backgroundColor};
 
+    /** Handle click by calling remove box from parent.  */
     function handleClick() {
+      console.log("idInHandleClick=", id)
       removeBox(id);
     }
 
