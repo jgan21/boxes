@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Box from "./Box";
+import NewBoxForm from "./NewBoxForm";
 import { v4 as uuid } from 'uuid';
 
 /** BoxList will display boxes and the new box form.
@@ -44,3 +46,5 @@ function BoxList(){
     </div>
   )
 }
+
+export default BoxList;
